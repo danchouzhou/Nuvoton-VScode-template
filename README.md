@@ -29,7 +29,6 @@ make
 git submodule add https://github.com/OpenNuvoton/M480BSP.git NuMicro-M4/M480BSP
 ```
 2. Edit ``CORTEX_M``, ``BASE``, ``DEVICE`` in the ``makefile.conf``.
-3. Edit ``ARM_MATH_CM4`` if you are using M0.
 
 ## Reference
 - [Git - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)

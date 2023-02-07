@@ -6,7 +6,7 @@ STARTUP_DEFS=-D__STARTUP_CLEAR_BSS -D__START=main
 # Need following option for LTO as LTO will treat retarget functions as
 # unused without following option
 CFLAGS += -fno-builtin
-CFLAGS += -D ARM_MATH_CM0
+CFLAGS += -D ARM_MATH_CM$(CORTEX_M)
 
 LDSCRIPTS=-L. -L../$(BASE)/Library/Device/Nuvoton/$(DEVICE)/Source/GCC -T gcc_arm.ld
 
