@@ -33,3 +33,4 @@ git submodule add https://github.com/OpenNuvoton/M480BSP.git NuMicro-M4/M480BSP
 
 ## Reference
 - [Git - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+- [Set global $PATH environment variable in VS Code - Stack Overflow](https://stackoverflow.com/questions/43983718/set-global-path-environment-variable-in-vs-code)
