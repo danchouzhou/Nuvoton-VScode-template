@@ -1,0 +1,5 @@
+{
+    "terminal.integrated.env.windows": {
+        "PATH": "${env:PATH};${env:UserProfile}\\BuildTools\\Windows\\gcc-arm-none-eabi-10.3-2021.07\\bin;${env:UserProfile}\\BuildTools\\Windows\\xpack-windows-build-tools-4.3.0-1\\bin;"
+    },
+}

@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "gcc-arm-none-eabi-10.3-2021.07",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm",
+            "compilerPath": "${env:UserProfile}\\BuildTools\\Windows\\gcc-arm-none-eabi-10.3-2021.07\\bin\\arm-none-eabi-gcc.exe",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}
