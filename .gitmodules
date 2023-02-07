@@ -1,3 +1,6 @@
 [submodule "NuMicro-M4/M480BSP"]
 	path = NuMicro-M4/M480BSP
 	url = https://github.com/OpenNuvoton/M480BSP.git
+[submodule "NuMicro-M0/NUC131BSP"]
+	path = NuMicro-M0/NUC131BSP
+	url = https://github.com/OpenNuvoton/NUC131BSP.git
