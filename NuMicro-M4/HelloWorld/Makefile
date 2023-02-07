@@ -16,6 +16,7 @@ IPATH =  .
 IPATH += $(BASE)/Library/CMSIS/Include
 IPATH += $(BASE)/Library/Device/Nuvoton/$(DEVICE)/Include
 IPATH += $(BASE)/Library/StdDriver/inc
+IPATH += ../NuLibrary
 IPATH += User
 
 BSP =  $(wildcard $(BASE)/Library/CMSIS/DSP_Lib/Source/*/*.c)
@@ -23,7 +24,7 @@ BSP += $(wildcard $(BASE)/Library/Device/Nuvoton/$(DEVICE)/Source/*.c)
 BSP += $(wildcard $(BASE)/Library/Device/Nuvoton/$(DEVICE)/Source/GCC/*.c)
 BSP += $(wildcard $(BASE)/Library/StdDriver/src/*.c)
 
-LIB =  $(wildcard $(BASE)/*.c)
+LIB =  $(wildcard ../NuLibrary/*.c)
 
 USR =  $(wildcard *.c)
 USR += $(wildcard User/*.c)
