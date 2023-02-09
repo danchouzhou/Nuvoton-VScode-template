@@ -17,8 +17,13 @@ If you want to build the target for Nuvoton M480 series for example. Open a term
 ```
 cd NuMicro-M4/HelloWorld
 ```
-Simply make. HelloWorld.bin should be inside the Object folder.
+Simply ``make``. ``HelloWorld.bin`` should be inside the ``Objects`` folder.
 ```
+make
+```
+### Rebuild
+```
+make clean
 make
 ```
 ![image](screenshot.png)
