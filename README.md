@@ -15,9 +15,12 @@ Since we use VScode ``setting.json`` provide the build environment, only the exe
 - [OpenOCD-Nuvoton](https://github.com/OpenNuvoton/OpenOCD-Nuvoton/releases)
 #### Linux users
 - [gcc-arm-none-eabi-10.3-2021.07-x86_64-linux.tar.bz2](https://developer.arm.com/downloads/-/gnu-rm)
+- [OpenOCD-Nuvoton](https://github.com/OpenNuvoton/OpenOCD-Nuvoton/releases)
 ```
 mkdir -p ~/BuildTools/Linux/
 tar jxvf gcc-arm-none-eabi-10.3-2021.07-x86_64-linux.tar.bz2 -C ~/BuildTools/Linux/
+unzip OpenOCD_Linux.zip -d ~/BuildTools/Linux/
+chmod +x ~/BuildTools/Linux/OpenOCD/bin/openocd
 ```
 - GNU Make should be installed.
 ```
@@ -35,6 +38,10 @@ make
 ### Flash the firmware
 ```
 make flash
+```
+For Linux users, probably need to add the access permission for usb device.
+```
+sudo chmod -R 777 /dev/bus/usb/
 ```
 ### Rebuild
 ```
