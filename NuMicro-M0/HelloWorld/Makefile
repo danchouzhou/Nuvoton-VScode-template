@@ -50,5 +50,8 @@ $(OBJ_BSP): $(BSP)
 	mkdir -p ./Objects
 	cd ./Objects && $(CC) $(addprefix ../,$^) $(CFLAGS) -c $(addprefix -I ../,$(IPATH))
 
+flash:
+	openocd -f ../scripts/interface/nulink.cfg -f ../scripts/target/numicroM$(CORTEX_M).cfg -c "init" -c "reset halt" -c "flash write_image erase Objects/$(NAME).bin 0x00000000" -c "reset" -c "exit"
+
 clean:
 	cd ./Objects && rm -f *.axf *.map *.o *.bin

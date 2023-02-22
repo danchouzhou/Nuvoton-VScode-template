@@ -12,6 +12,7 @@ Since we use VScode ``setting.json`` provide the build environment, only the exe
 - [gcc-arm-none-eabi-10.3-2021.07-win32.zip](https://developer.arm.com/downloads/-/gnu-rm)
 - [xpack-windows-build-tools-4.3.0-1-win32-x64.zip
 ](https://github.com/xpack-dev-tools/windows-build-tools-xpack/releases/tag/v4.3.0-1)
+- [OpenOCD-Nuvoton](https://github.com/OpenNuvoton/OpenOCD-Nuvoton/releases)
 #### Linux users
 - [gcc-arm-none-eabi-10.3-2021.07-x86_64-linux.tar.bz2](https://developer.arm.com/downloads/-/gnu-rm)
 ```
@@ -30,6 +31,10 @@ cd NuMicro-M4/HelloWorld
 Simply ``make``. ``HelloWorld.bin`` should be inside the ``Objects`` folder.
 ```
 make
+```
+### Flash the firmware
+```
+make flash
 ```
 ### Rebuild
 ```

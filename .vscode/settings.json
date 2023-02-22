@@ -1,6 +1,6 @@
 {
     "terminal.integrated.env.windows": {
-        "PATH": "${env:PATH};C:\\Users\\${env:UserName}\\BuildTools\\Windows\\gcc-arm-none-eabi-10.3-2021.07\\bin;C:\\Users\\${env:UserName}\\BuildTools\\Windows\\xpack-windows-build-tools-4.3.0-1\\bin;"
+        "PATH": "${env:PATH};C:\\Users\\${env:UserName}\\BuildTools\\Windows\\gcc-arm-none-eabi-10.3-2021.07\\bin;C:\\Users\\${env:UserName}\\BuildTools\\Windows\\xpack-windows-build-tools-4.3.0-1\\bin;C:\\Users\\${env:UserName}\\BuildTools\\Windows\\OpenOCD\\bin;"
     }, 
     "terminal.integrated.env.linux": {
         "PATH": "${env:PATH}:${env:HOME}/BuildTools/Linux/gcc-arm-none-eabi-10.3-2021.07/bin"
