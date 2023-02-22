@@ -62,3 +62,4 @@ git submodule add https://github.com/OpenNuvoton/M480BSP.git NuMicro-M4/M480BSP
 - [Makefile Tutorial By Example](https://makefiletutorial.com/)
 - [Git - Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 - [Set global $PATH environment variable in VS Code - Stack Overflow](https://stackoverflow.com/questions/43983718/set-global-path-environment-variable-in-vs-code)
+- [Flashing firmware with OpenOCD without using telnet](https://acassis.wordpress.com/2016/08/22/flashing-firmware-with-openocd-without-using-telnet/)
