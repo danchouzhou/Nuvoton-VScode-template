@@ -6,23 +6,17 @@ STARTUP_DEFS=-D__STARTUP_CLEAR_BSS -D__START=main
 # Need following option for LTO as LTO will treat retarget functions as
 # unused without following option
 CFLAGS += -fno-builtin
-CFLAGS += -D ARM_MATH_CM$(CORTEX_M)
 
-LDSCRIPTS=-L. -L../$(BASE)/Library/Device/Nuvoton/$(DEVICE)/Source/GCC -T gcc_arm.ld
+LDSCRIPTS=-L. -L../$(BASE)/Driver/Source/ -T GCC.ld
 
 LFLAGS=$(USE_NANO) $(USE_NOHOST) $(LDSCRIPTS) $(GC) $(MAP)
 
 IPATH =  .
-IPATH += $(BASE)/Library/CMSIS/Include
-IPATH += $(BASE)/Library/Device/Nuvoton/$(DEVICE)/Include
-IPATH += $(BASE)/Library/StdDriver/inc
+IPATH += $(BASE)/Driver/Include
 IPATH += ../NuLibrary
 IPATH += User
 
-BSP =  $(wildcard $(BASE)/Library/CMSIS/DSP_Lib/Source/*/*.c)
-BSP += $(wildcard $(BASE)/Library/Device/Nuvoton/$(DEVICE)/Source/*.c)
-BSP += $(wildcard $(BASE)/Library/Device/Nuvoton/$(DEVICE)/Source/GCC/*.c)
-BSP += $(wildcard $(BASE)/Library/StdDriver/src/*.c)
+BSP = $(wildcard $(BASE)/Driver/Source/*.c)
 
 LIB =  $(wildcard ../NuLibrary/*.c)
 
