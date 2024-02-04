@@ -68,6 +68,17 @@ int main()
     /* Connect UART to PC, and open a terminal tool to receive following message */
     printf("Hello World\n");
 
+    /* Get address of the PB5 PDIO register */
+    volatile uint32_t *u32PB5Ptr = (volatile uint32_t *)((GPIO_PIN_DATA_BASE+(0x40*(1))) + ((5)<<2));
+
+    GPIO_SetMode(PB, BIT5, GPIO_MODE_OUTPUT);
+
+    while(1)
+    {
+        *u32PB5Ptr=1;
+        *u32PB5Ptr=0;
+    }
+
     /* Got no where to go, just loop forever */
     while(1);
 

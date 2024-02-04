@@ -7,6 +7,7 @@
 #include "nuc980.h"
 #include "sys.h"
 #include <stdio.h>
+#include "gpio.h"
 
 void UART_Init()
 {
@@ -36,14 +37,26 @@ int32_t main(void)
 
     printf("Simple Demo Code\n\n");
 
-    printf("Please Input Any Key\n\n");
+    /* Get address of the PG7 PDIO register */
+    volatile uint32_t *u32PG7Ptr = (volatile uint32_t *)((GPIO_PIN_DATA_BASE+(0x40*(6))) + ((7)<<2));
 
-    do
+    GPIO_SetMode(PG, BIT7, GPIO_MODE_OUTPUT);
+
+    while(1)
     {
-        printf("Input: ");
-        ch = getchar();
-        printf("%c\n", ch);
+        *u32PG7Ptr=1;
+        *u32PG7Ptr=0;
     }
-    while(1);
+
+
+    // printf("Please Input Any Key\n\n");
+
+    // do
+    // {
+    //     printf("Input: ");
+    //     ch = getchar();
+    //     printf("%c\n", ch);
+    // }
+    // while(1);
 
 }
